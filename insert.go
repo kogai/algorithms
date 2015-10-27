@@ -25,7 +25,7 @@ func insert(arr []int, pos int, val int) {
 	// 1, 9
 	// 2, 8
 	i := pos - 1
-	for i >= 0 && compare(arr[i], val) > 0 {
+	for i >= 0 && helper.Compare(arr[i], val) > 0 {
 		arr[i+1] = arr[i]
 		// fmt.Println(arr)
 		i--
@@ -33,14 +33,4 @@ func insert(arr []int, pos int, val int) {
 	arr[i+1] = val
 	// fmt.Println(arr)
 	// fmt.Println("-------end")
-}
-
-func compare(target int, base int) int {
-	if base > target {
-		return -1
-	}
-	if base < target {
-		return 1
-	}
-	return 0
 }
