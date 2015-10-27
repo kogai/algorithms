@@ -1,6 +1,7 @@
 package helper
 
 import (
+	// "fmt"
 	"math/rand"
 	"time"
 )
@@ -13,6 +14,6 @@ func Create(max int) []int {
 		val := rand.Intn(max)
 		sortable[i] = val
 	}
-
+	// fmt.Println(sortable)
 	return sortable
 }
