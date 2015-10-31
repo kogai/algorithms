@@ -6,8 +6,7 @@ import (
 )
 
 func main() {
-	// helper.Benchmark(sort, 60)
-	helper.Benchmark(sort, 10000)
+	helper.Benchmark(sort, 10000) // 平均値: 48.565721ms
 }
 
 func sort(a []int) []int {
@@ -15,22 +14,14 @@ func sort(a []int) []int {
 	for index := 1; index < count; index++ {
 		insert(a, index, a[index])
 	}
-	// fmt.Println(a)
 	return a
 }
 
 func insert(arr []int, pos int, val int) {
-	// fmt.Println("-------start")
-	// fmt.Println(arr)
-	// 1, 9
-	// 2, 8
 	i := pos - 1
 	for i >= 0 && helper.Compare(arr[i], val) > 0 {
 		arr[i+1] = arr[i]
-		// fmt.Println(arr)
 		i--
 	}
 	arr[i+1] = val
-	// fmt.Println(arr)
-	// fmt.Println("-------end")
 }

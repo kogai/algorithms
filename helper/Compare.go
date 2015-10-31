@@ -9,3 +9,8 @@ func Compare(target int, base int) int {
 	}
 	return 0
 }
+
+// 大->小を較べる
+// small, big -1
+// big, small 1
+// even 0
